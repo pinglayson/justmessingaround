@@ -11,12 +11,10 @@ try {
     $routes = new RouteCollection();
 
     // Add Routing here
-    $convert = new Route(
+    $routes->add('convert', new Route(
         '/api/v1/convert',
         array('api' => 'api/Currency','method'=>'convert')
-    );
-    
-    $routes->add('convert', $convert);
+    ));
 
 
     // Add Routing end
@@ -25,11 +23,9 @@ try {
     $context->fromRequest(Request::createFromGlobals());
 
     $matcher = new UrlMatcher($routes, $context);
-
     $parameters = $matcher->match($context->getPathInfo());
     
     require_once __DIR__.'/'.$parameters['api'].'.php';
-
     call_user_func_array(array(ucfirst(str_replace("/","\\",$parameters['api'])), $parameters['method']), array());
 
 }
