@@ -24,7 +24,7 @@ to_tz(optional) - timezone for second date
 
 Change 'base_uri' in tests/DateApiTest.php to local setting e.g http://justmessingaround.test/
 
-The run this code in project root.
+Then run this code in project root.
 ```sh
 $ ./vendor/bin/phpunit --bootstrap vendor/autoload.php tests/DateApiTest.php
 ```
