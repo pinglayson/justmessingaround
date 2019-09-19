@@ -12,11 +12,13 @@ $ composer install
 http://justmessingaround.test/api/v1/between?from=2019-09-18%2006:57:44&to=2019-09-01%2006:57:44&format=days&to_tz=America/Sitka
 
 ### Parameters
+```sh
 from - first date
 to - second date
 format - format for values on between e.g days|weekdays|weeks|seconds|minutes|hours|years
 from_tz(optional) - timezone for first date
 to_tz(optional) - timezone for second date
+```
 
 ### Testing
 
